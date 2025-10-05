@@ -15,7 +15,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: '*',
+  origin: [
+    'http://localhost:5173',
+    'https://girlsmagnet.netlify.app/'  // Replace with YOUR Netlify URL
+  ],
   credentials: true
 }));
 app.use(express.json()); // Essential for parsing req.body
